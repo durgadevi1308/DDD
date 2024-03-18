@@ -1,0 +1,195 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> print("NESTED DICTIONARY")
+NESTED DICTIONARY
+>>> dict1={"stud1":{"name":"Adhik","age":15,"group":"Commerce"},
+...        "stud2":{"name":"Bunny","age":16,"group":"ComputerScience"},
+...        "stud3":{"name":"Swaraj","age":16,"group":"Accountancy"}}
+>>> print(dict1)
+{'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, 'stud2': {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}, 'stud3': {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}}
+>>> dict2={"EM01","EM02","EM03"}
+>>> dict3={"role":"developer","location":"banglore"}
+>>> x=dict.fromkeys(dict2,dict3)
+>>> print(x)
+{'EM01': {'role': 'developer', 'location': 'banglore'}, 'EM03': {'role': 'developer', 'location': 'banglore'}, 'EM02': {'role': 'developer', 'location': 'banglore'}}
+>>> 
+>>> 
+>>> print(dict1)
+{'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, 'stud2': {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}, 'stud3': {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}}
+>>> dir(dict1)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> 
+>>> print(dict1["stud1"])
+{'name': 'Adhik', 'age': 15, 'group': 'Commerce'}
+>>> print(dict1["stud2"]["group"])
+ComputerScience
+print(dict1["stud3"].get("name"))
+Swaraj
+KeyboardInterrupt
+print(dict1["stud3"].get("location"))
+None
+print(dict1.items())
+dict_items([('stud1', {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}), ('stud2', {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}), ('stud3', {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'})])
+print(dict1.keys())
+dict_keys(['stud1', 'stud2', 'stud3'])
+print(dict1.values())
+dict_values([{'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}, {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}])
+print(dict1.pop("stud1"))
+{'name': 'Adhik', 'age': 15, 'group': 'Commerce'}
+print(dict1)
+{'stud2': {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}, 'stud3': {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}}
+print(dict1.popitem())
+('stud3', {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'})
+print(dict1)
+{'stud2': {'name': 'Bunny', 'age': 16, 'group': 'ComputerScience'}}
+y={"stud1":{"name":"Adhik","age":15,"group":"Commerce"}, "stud2":{"name":"Bunny","age":16,"group":"BusinessMaths"}}
+dict1.update(y)
+print(dict1)
+{'stud2': {'name': 'Bunny', 'age': 16, 'group': 'BusinessMaths'}, 'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}}
+print(y)
+{'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, 'stud2': {'name': 'Bunny', 'age': 16, 'group': 'BusinessMaths'}}
+dict1["stud3"]={"stud3":{"name":"Swaraj","age":16,"group":"Accountancy"}}
+print(dict1)
+{'stud2': {'name': 'Bunny', 'age': 16, 'group': 'BusinessMaths'}, 'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, 'stud3': {'stud3': {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}}}
+dict1.setdefault("class11")
+print(dict1)
+{'stud2': {'name': 'Bunny', 'age': 16, 'group': 'BusinessMaths'}, 'stud1': {'name': 'Adhik', 'age': 15, 'group': 'Commerce'}, 'stud3': {'stud3': {'name': 'Swaraj', 'age': 16, 'group': 'Accountancy'}}, 'class11': None}
+print("\n\n\n\n")
+
+
+
+
+
+print("SETS AND FUNCTIONS")
+SETS AND FUNCTIONS
+eg={"audi","benz","bmw"}
+print(eg)
+{'bmw', 'audi', 'benz'}
+dir(eg)
+['__and__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+
+#add()
+eg.add("hyundai")
+print(eg)
+{'bmw', 'audi', 'benz', 'hyundai'}
+
+#presence and absence of element
+print("benz" in eg)
+True
+print("nano" in eg)
+False
+
+#update-ignores duplicate values
+eg1={"scorpio","benz","lamborghini"}
+eg.update(eg1)
+print(eg)
+{'audi', 'lamborghini', 'benz', 'scorpio', 'bmw', 'hyundai'}
+
+#clear()
+eg1.clear()
+print(eg1)
+set()
+
+#copy()
+eg1=eg.copy()
+print(eg1)
+{'audi', 'lamborghini', 'benz', 'scorpio', 'bmw', 'hyundai'}
+
+#difference()-returns the uncommon element from the given sets
+s1={"csk","rcb","srh"}
+s2={"rcb","rr","csk"}
+s1.difference(s2)
+{'srh'}
+s2-s1 #"-" operator for difference
+{'rr'}
+
+#difference_update()-updates the first set with uncommon element
+A={1,2,3,4,5}
+B={2,4,6,8}
+A.difference_update(B)
+print(A)
+{1, 3, 5}
+print(B)
+{8, 2, 4, 6}
+
+#discard()-removes the desired element and returns none if element not found
+set1={"chennai","banglore","hyderabad","trivandrum"}
+set1.discard("banglore")
+print(set1)
+{'trivandrum', 'chennai', 'hyderabad'}
+set1.discard("mumbai")
+print(set1.discard("mumbai"))
+None
+
+#remove()-removes the desired element and raises error if element not found
+set2={"mumbai","jaipur","lucknow","ranchi"}
+set2.remove("mumbai")
+print(set2)
+{'jaipur', 'lucknow', 'ranchi'}
+set2.remove("AA")
+Traceback (most recent call last):
+  File "<pyshell#84>", line 1, in <module>
+    set2.remove("AA")
+KeyError: 'AA'
+
+#intersection()-returns the common element
+A={"apple","banana","cherry","durian"}
+B={"mango","grapes","banana"}
+A.intersection(B)
+{'banana'}
+
+#intersection_update()-updates the first set with common elements
+A={"apple","banana","cherry","durian"}
+B={"mango","grapes","banana","pine","durian"}
+A.intersection_update(B)
+print(A)
+{'durian', 'banana'}
+
+
+#isdisjoint()
+A={"apple","banana","cherry","durian"}
+B={"mango","grapes","banana","pine","durian"}
+C={"onion","garlic","spinach"}
+A.isdisjoint(C)
+True
+B.isdisjoint(A)
+False
+
+#issuperset(), issubset()
+set1={'a','b','c','d','e','f'}
+set2={'b','e'}
+set1.issuperset(set2)
+True
+set1.issubset(set2)
+False
+set2.issuperset(set1)
+False
+set2.issubset(set1)
+True
+
+#pop()-removes any random element
+set1={'a','b','c','d','e','f'}
+set1.pop()
+'c'
+print(set1)
+{'f', 'e', 'b', 'd', 'a'}
+
+#symmetric_difference()-returns all uncommon elements from the sets
+A={'Hyundai', 'lamborghini', 'benz', 'audi', 'bmw', 'scorpio'}
+B={'benz', 'ranger', 'lamborghini', 'scorpio','nano'}
+A.symmetric_difference(B)
+{'audi', 'Hyundai', 'nano', 'bmw', 'ranger'}
+
+#symmetric_difference_update()-updates all the elements in first set with uncommon elements
+A={'Hyundai', 'lamborghini', 'benz', 'audi', 'bmw', 'scorpio'}
+B={'benz', 'ranger', 'lamborghini', 'scorpio','nano'}
+A.symmetric_difference_update(B) 
+print(A)
+{'audi', 'Hyundai', 'nano', 'bmw', 'ranger'}
+
+#union()-clubs all elements together into a single set
+KeyboardInterrupt
+A={'Hyundai', 'lamborghini', 'benz', 'audi', 'bmw', 'scorpio'}
+B={'benz', 'ranger', 'lamborghini', 'scorpio','nano'}
+A.union(B)
+{'audi', 'lamborghini', 'scorpio', 'bmw', 'Hyundai', 'benz', 'nano', 'ranger'}

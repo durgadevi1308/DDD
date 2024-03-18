@@ -1,0 +1,113 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+print("LIST AND FUNCTIONS")
+LIST AND FUNCTIONS
+l1=["CC","GT","OOSE","DWH","ESIOT","SDN"]
+dir(l1)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+l1.append("DWH")
+print(l1)
+['CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN', 'DWH']
+l2=l1.copy()
+print(l2)
+['CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN', 'DWH']
+l1.count("DWH")
+2
+l3=["sem6"]
+l3.extend(l1)
+print(l3)
+['sem6', 'CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN', 'DWH']
+l3.index("GT")
+2
+l3.index("DWH")
+4
+l1.clear()
+print(l1)
+[]
+l3.insert(1,"subjects")
+print(l3)
+['sem6', 'subjects', 'CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN', 'DWH']
+l3.pop()
+'DWH'
+print(l3)
+['sem6', 'subjects', 'CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN']
+l3.remove("subjects")
+print(l3)
+['sem6', 'CC', 'GT', 'OOSE', 'DWH', 'ESIOT', 'SDN']
+l3.reverse()
+print(l3)
+['SDN', 'ESIOT', 'DWH', 'OOSE', 'GT', 'CC', 'sem6']
+l3.sort()
+print(l3)
+['CC', 'DWH', 'ESIOT', 'GT', 'OOSE', 'SDN', 'sem6']
+print("\n\n\n\n")
+
+
+
+
+
+print("TUPLE AND FUNCTIONS")
+TUPLE AND FUNCTIONS
+t1=("AI-ML","Cyber Security","Blockchain","Data Science","Cyber Security")
+t1.count("AI-ML")
+1
+t1.count("Cyber Security")
+2
+t1.index("Cyber Security")
+1
+print("\n\n\n\n")
+
+
+
+
+
+print("DICTIONARY AND FUNCTIONS")
+DICTIONARY AND FUNCTIONS
+d1={"csk":"dhoni","rcb":"kohli","mi":"rohit","srh":"williamson"}
+dir(d1)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+d2=d1.copy()
+print(d2)
+{'csk': 'dhoni', 'rcb': 'kohli', 'mi': 'rohit', 'srh': 'williamson'}
+d2.clear()
+print(d2)
+{}
+ x=('Tens','Hundreds','Thousands','Lakhs')
+ 
+SyntaxError: unexpected indent
+x=('Tens','Hundreds','Thousands','Lakhs')
+y=("x10s")
+d3=dict.fromkeys(x,y)
+print(d3)
+{'Tens': 'x10s', 'Hundreds': 'x10s', 'Thousands': 'x10s', 'Lakhs': 'x10s'}
+>>> print(d1.get('csk'))
+dhoni
+>>> print(d1.get('ashwin'))
+None
+>>> print(d1.items())
+dict_items([('csk', 'dhoni'), ('rcb', 'kohli'), ('mi', 'rohit'), ('srh', 'williamson')])
+>>> print(d1.keys())
+dict_keys(['csk', 'rcb', 'mi', 'srh'])
+>>> print(d1.values())
+dict_values(['dhoni', 'kohli', 'rohit', 'williamson'])
+>>> print(d1.pop('mi'))
+rohit
+>>> print(d1)
+{'csk': 'dhoni', 'rcb': 'kohli', 'srh': 'williamson'}
+>>> print(d1.popitem())
+('srh', 'williamson')
+>>> print(d1)
+{'csk': 'dhoni', 'rcb': 'kohli'}
+>>> d1.setdefault('iplteams')
+>>> print(d1)
+{'csk': 'dhoni', 'rcb': 'kohli', 'iplteams': None}
+>>> d1.setdefault('','10')
+'10'
+>>> print(d1)
+{'csk': 'dhoni', 'rcb': 'kohli', 'iplteams': None, '': '10'}
+>>> dict={'csk':'dhoni','rcb':'kohli','team':'captain'}
+>>> d1.update(dict)
+>>> print(d1)
+{'csk': 'dhoni', 'rcb': 'kohli', 'iplteams': None, '': '10', 'team': 'captain'}
+>>> print(dict)
+{'csk': 'dhoni', 'rcb': 'kohli', 'team': 'captain'}
